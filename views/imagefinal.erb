@@ -1,0 +1,52 @@
+<!DOCTYPE erb>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aldrich" type="text/css">
+  <link rel ="stylesheet" href = "stylesheets/imagefinal.css">
+    <style>
+      .page-header {
+        background-image: url(<%= @link %>); 
+      }
+      .blended {
+        background-color: <%= @color %>;
+      }
+      .demo {
+        height: <%= @height %>px;
+        width : <%= @width %>px;
+      }
+    </style>
+    <link rel="stylesheet" href="stylesheets/deepfry2.css">
+    <title>title</title>
+  </head>
+  
+  <body>
+    <div class="page-header deepfry blended demo"></div>
+    <form method = "POST" action = "/imagefinal"> 
+      <p id = "screenshot">Like your image? Take a screenshot! Otherwise, pick a color thet you'd like to be more prominent in this image :):</p>
+      <div id = "choice">
+        <input type="hidden"name="color2" value=<%= @color2 %>>
+        <input type="radio"name="color2" value="#00cccc"> pink<br>
+        <input type="radio"name="color2" value="#99ccff"> red<br>
+        <input type="radio"name="color2" value="#0066cc"> orange<br>
+        <input type="radio"name="color2" value="#6666ff"> yellow<br>
+        <input type="radio"name="color2" value="#cc99ff"> lime<br>
+        <input type="radio"name="color2" value="#4B1C6E"> green<br>
+        <input type="radio"name="color2" value="#ff9999"> cyan<br>
+        <input type="radio"name="color2" value="#ffcc99"> blue<br>
+        <input type="radio"name="color2" value="#99ff99"> purple<br>
+      </div>
+        <br>
+        <p id = "hex">If you have a hex code you'd like to use, enter it in the text box (Don't forget the #). The colors are inverted, so if you want to make your image have more of one color, choose the color across from it on the color wheel. Below is a good way to find the hex codes for certain colors</p>
+        <a id = "link" href="https://www.rapidtables.com/web/color/RGB_Color.html">https://www.rapidtables.com/web/color/RGB_Color.html</a>
+        <br>
+        <br>
+      <input type="hidden"name="link" value=<%= @link %>>
+      <input type="text" name="color">
+      <input type="hidden" name="height" value=<%= @height %>>
+      <input type="hidden" name="width" value=<%= @width %>>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+.page-header:after {
+  content: "";
+  background-image: url("https://camo.githubusercontent.com/f85c66794181dc9da010c785a9c5bfbe97f83cbc/687474703a2f2f692e696d6775722e636f6d2f4f45425a7338422e706e67");
+  opacity: 0.4;
+  position: fixed;
+}
+
+.opacity {
+  opacity: 0.5;
+}
+
+.deepfry {
+  filter: invert(100%) saturate(7);
+}
+
+body {
+  padding: 20px;
+}
+
+.demo > div {
+  float: left;
+  background-size: cover;
+}
+
+.demo {
+  overflow: hidden;
+}
+
+.blended{
+  background-repeat: no-repeat;
+  background-blend-mode: multiply; 
+}
