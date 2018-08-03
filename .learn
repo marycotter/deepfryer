@@ -1,9 +1,0 @@
-tags:
-  - sinatra
-  - forms
-  - post
-  - routes
-languages:
-  - ruby
-
-parent_template: git@github.com:learn-co-curriculum/sinatra-forms-params-readme-walkthrough.git
