@@ -2,22 +2,50 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>title</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aldrich" type="text/css">
-  <link rel ="stylesheet" href = "stylesheets/imagefinal.css">
+    <title>Fried Meme</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aldrich" type="text/css">
+    <link rel ="stylesheet" href = "stylesheets/imagefinal.css">
     <style>
       .page-header {
         background-image: url(<%= @link %>); 
       }
       .blended {
         background-color: <%= @color %>;
+        background-blend-mode: multiply;
+        background-repeat: no-repeat;
       }
       .demo {
         height: <%= @height %>px;
         width : <%= @width %>px;
+        overflow: hidden;
+      }
+
+      .page-header:after {
+        content: "";
+        background-image: url("https://camo.githubusercontent.com/f85c66794181dc9da010c785a9c5bfbe97f83cbc/687474703a2f2f692e696d6775722e636f6d2f4f45425a7338422e706e67");
+        height: 100%;
+        width: 100%;
+        opacity: 0.4;
+        position: fixed;
+      }
+
+      .opacity {
+        opacity: 0.5;
+      }
+
+      .deepfry {
+        filter: saturate(7) invert(100%);
+      }
+
+      body {
+        padding: 20px;
+      }
+      .demo > div {
+        float: left;
+        background-size: cover;
       }
     </style>
-    <link rel="stylesheet" href="stylesheets/deepfry2.css">
+    <!--<link rel="stylesheet" href="stylesheets/deepfry2.css">-->
     <title>title</title>
   </head>
   

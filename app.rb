@@ -27,11 +27,11 @@ class App < Sinatra::Base
     @link = params[:link]
     @height = params[:height] 
     if @height == ""
-      @height = "400"
+      @height = "800"
     end
     @width = params[:width]
     if @width == ""
-      @width = "400"
+      @width = "800"
     end
     @color = params[:color]
     @color2 = params[:color2]
